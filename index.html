@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cut&Run maraton and actvity tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="#">
+          <img src="img/cutrun-logo.png">
+        </a>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="nav" id="nav-menu">
+        <a href="#">Platform</a>
+        <a href="#">Timing</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop class="hero-video">
+      <source src="video/home-header-video.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-text">
+      <h1 id="rotating-text">Powering Your Race Events</h1>
+    </div>
+  </section>
+
+  <section class="split-section">
+    <img src="img/app-connect.png" alt="Race Image" class="split-image" />
+    <div class="split-text">
+      <h2>Analyse and compare your personal statistics</h2>
+      <p>Get all the insights from your performances during and after an event. With a TRACX account you can compare your performances with other events you have participated in.</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-box">
+      <h3>Registration</h3>
+      <p>Custom forms, payments, and participant management.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Live Timing</h3>
+      <p>Real-time results with app or chip timing options.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Engagement</h3>
+      <p>Mobile-friendly tools for racers and fans.</p>
+    </div>
+  </section>
+
+  <section class="features2" id="features2">
+    <div class="feature2">
+      <h3>Registration</h3>
+      <p>Customizable online registration system with payment and participant management.</p>
+    </div>
+    <div class="feature2">
+      <h3>Timing</h3>
+      <p>Accurate live timing and results tracking using RFID and app-based solutions.</p>
+    </div>
+    <div class="feature2">
+      <h3>Engagement</h3>
+      <p>Keep participants connected with tracking, notifications, and social sharing.</p>
+    </div>
+  </section>
+
+  <section class="cta" id="demo">
+    <h2>Ready to Elevate Your Event?</h2>
+    <a href="https://cutrun.top/contact">Request a Demo</a>
+  </section>
+
+  <footer>
+    &copy; 2025 CUTRUN. All rights reserved.
+  </footer>
+
+  <script>
+    // Toggle mobile nav
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("nav-menu").classList.toggle("open");
+    });
+
+    // Rotating hero text
+    const texts = ["Powering Your Race Events", "Seamless Timing Solutions", "Engage Every Participant"];
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % texts.length;
+      document.getElementById("rotating-text").textContent = texts[index];
+    }, 3000);
+  </script>
+</body>
+</html>
+
